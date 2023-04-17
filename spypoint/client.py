@@ -110,6 +110,8 @@ class Client:
                hd: bool = False,
                favorite: bool = False,
                limit: int = 100,
+               # un-comment the species line if you only want pictures of game and human activity - both here and below.
+               #species: str =["buck", "turkey", "coyote", "moose", "bear", "humanactivity", "deer"],
                tags: Collection[str] = tuple())\
             -> Collection[Photo]:
 
@@ -120,6 +122,8 @@ class Client:
             'favorite': favorite,
             'hd': hd,
             'limit': limit,
+            # un-comment the species line if you only want pictures of game and human activity - both here and above.
+            #'species': species,
             'tag': list(tags),
         })
         res.raise_for_status()
